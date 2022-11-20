@@ -168,13 +168,13 @@ class _PhonePageState extends State<PhonePage> {
                   onTap: () async {
                     otpController.clear();
                     try {
-                      // // Create a PhoneAuthCredential with the code
-                      // PhoneAuthCredential credential =
-                      //     PhoneAuthProvider.credential(
-                      //         verificationId: verify, smsCode: code);
-                      //
-                      // // Sign the user in (or link) with the credential
-                      // await auth.signInWithCredential(credential);
+                      // Create a PhoneAuthCredential with the code
+                      PhoneAuthCredential credential =
+                          PhoneAuthProvider.credential(
+                              verificationId: verify, smsCode: code);
+
+                      // Sign the user in (or link) with the credential
+                      await auth.signInWithCredential(credential);
                       Navigator.push(
                         context,
                         MaterialPageRoute(
