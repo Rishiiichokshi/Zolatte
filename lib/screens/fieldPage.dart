@@ -20,6 +20,14 @@ class _SuccessState extends State<Success> {
 
   late DatabaseReference dbRef;
 
+  void clearText() {
+    address.clear();
+    phoneNumber.clear();
+    fullName.clear();
+    age.clear();
+    freeText.clear();
+  }
+
   @override
   void initState() {
     // TODO: implement initState
@@ -81,6 +89,7 @@ class _SuccessState extends State<Success> {
               padding: EdgeInsets.only(top: 90),
               child: ElevatedButton(
                 onPressed: () {
+                  clearText();
                   Map <String, String> students = {
                     'address': address.text,
                     'phoneNumber': phoneNumber.text,
