@@ -89,7 +89,6 @@ class _SuccessState extends State<Success> {
               padding: EdgeInsets.only(top: 90),
               child: ElevatedButton(
                 onPressed: () {
-                  clearText();
                   Map <String, String> students = {
                     'address': address.text,
                     'phoneNumber': phoneNumber.text,
@@ -104,6 +103,7 @@ class _SuccessState extends State<Success> {
                   //   ),
                   // );
                   dbRef.push().set(students);
+                  clearText();
                 },
                 child: Text(
                   'Submit',

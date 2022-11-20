@@ -19,7 +19,7 @@ class _RetrieveDataPageState extends State<RetrieveDataPage> {
     return Container(
       margin: const EdgeInsets.all(10),
       padding: const EdgeInsets.all(10),
-      height: 120,
+      height: 200,
       color: Colors.amberAccent,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -41,6 +41,20 @@ class _RetrieveDataPageState extends State<RetrieveDataPage> {
           ),
           Text(
             student['fullName'].toString(),
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Text(
+            student['age'].toString(),
+            style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Text(
+            student['freeText'].toString(),
             style: TextStyle(fontSize: 16, fontWeight: FontWeight.w400),
           ),
           Row(
